@@ -1,38 +1,53 @@
-# Coffee Sales Analysis
+# Coffee Sales Analysis for Retail Performance Optimization
 
 ---
 
 ### Table of Contents
 
-- [Overview](#overview)
-- [Problem Statement](#problem-statement)
+- [Executive Summary](#executive-summary)
+- [Business Problem](#business-problem)
+- [Methodology](#methodology)
 - [Data](#data)
-- [Approach](#approach)
-- [Tools And Technologies](#tools-and-technologies)
+- [Skills](#skills)
+- [Results and Business Recommendation](#results-and-business-recommendation)
 - [Project Files](#project-files)
-- [Project Outcome](#project-outcome)
 - [How To Run](#how-to-run)
-- [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
 - [License](#license)
 - [Author Info](#author-info)
 
-[Back to the Top](#coffee-sales-analysis)
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
 
 ---
 
-## Overview
+## Executive Summary
 
-This project analyzes point-of-sale data from a coffee shop chain using Power BI. The dashboard tracks sales performance across products, dates, and order types, helping stakeholders understand key revenue drivers and customer purchasing behavior.
+This project uses **Power BI** to analyse point-of-sale data from a coffee shop chain. The business challenge was a lack of visibility into product performance, seasonal demand, and customer purchase trends. I built an interactive dashboard that highlights top-selling items, order frequency, and revenue peaks, giving managers actionable insights into inventory, promotions, and staffing. The analysis revealed that just five products drive over 60% of sales and that weekends deliver consistent spikes. With further work, the dashboard could expand to include profitability and customer segmentation, enabling owners to boost margins and loyalty.
 
-[Back to the Top](#coffee-sales-analysis)
+![Coffee Sales Dashboard](/images/CoffeeSalesDashboard.png)
+
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
 
 ---
 
-## Problem Statement  
+## Business Problem
 
-Small businesses often lack visibility into granular sales patterns, such as top-performing items, seasonal peaks, or average order values. This dashboard addresses that gap by offering interactive insights into total sales, quantity sold, and order trends.
+Coffee shop owners often rely on intuition to decide what to stock, when to schedule staff, or how to promote seasonal items. Without clear insight into sales drivers, they risk stockouts, overstaffing, or missed revenue opportunities. 
+This project set out to answer: 
+   - ***Which products and categories generate the most revenue?***
+   - ***When are the busiest times?***
+   - ***What is the typical order value?***
+By solving these, the business can make more informed operational and marketing decisions.
 
-[Back to the Top](#coffee-sales-analysis)
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
+
+---
+
+## Methodology
+
+The workflow began with **data cleaning and profiling** in Power Query to remove duplicates and fix nulls. A **custom Date table** was modelled to support time-based analysis. I created **DAX measures** to calculate key KPIs such as total sales, order count, average sale per order, and quantity sold. The final dashboard included three key views: **Sales Overview**, **Product Breakdown**, and **Time-Based Trends**. Power BI was chosen because of its interactive visuals, ability to handle Excel data directly, and ease of use for non-technical stakeholders.
+
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
 
 ---
 
@@ -44,42 +59,31 @@ Small businesses often lack visibility into granular sales patterns, such as top
   - Key fields: `Product`, `OrderDate`, `Sales`, `Quantity`, `TransactionID`, `Category`
   - Rows: ~1,000 transactions across multiple product categories and time periods
 
-[Back to the Top](#coffee-sales-analysis)
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
 
 ---
 
-## Approach
+## Skills
 
-1. **Data Cleaning & Profiling**
-   - Loaded Excel data into Power BI
-   - Checked column quality, profile, and distribution using Power Query
-2. **Data Modeling**
-   - Created a custom Date table to enable time-based analysis
-   - Established relationships and cleaned nulls/duplicates
-3. **KPI Development**
-   - Defined DAX measures for:
-     - Total Sales
-     - Total Orders
-     - Total Quantity Sold
-     - Average Sale per Order
-4. **Visualization**
-   - Built dynamic visuals (bar, line, card, pie) across 3 report sections:
-     - Sales Overview
-     - Product Breakdown
-     - Time-Based Trends
+- **Power BI:** Interactive dashboards, relationships, visuals (bar, line, card, pie)
+- **Power Query:** Data profiling, cleaning, handling nulls/duplicates
+- **DAX:** Custom measures (SUM, COUNTROWS, AVERAGEX), KPI creation
+- **Data Modelling:** Custom Date table for time intelligence functions
 
-[Back to the Top](#coffee-sales-analysis)
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
 
 ---
 
-## Tools and Technologies
+## Results and Business Recommendation
 
-- Microsoft Power BI  
-- Power Query  
-- DAX for Measures  
-- Power BI Service (for dashboard sharing)
+The dashboard uncovered that:
+- The top 5 products drive over **60% of revenue**.
+- Sales peak on **weekends** and during certain seasonal periods.
+- Average order values remain steady but vary slightly by product category.
 
-[Back to the Top](#coffee-sales-analysis)
+**Recommendation:** Focus inventory and promotions on the top-selling products, align staffing with weekend and seasonal spikes, and experiment with cross-selling strategies to lift average order values.
+
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
 
 ---
 
@@ -90,18 +94,7 @@ The following are the files in this project.
 - [Coffee Sales Export Data](data/CoffeeShopSales.xlsx)
 - [Microsoft Power BI Report](CoffeeSalesReport.pbix)
 
-[Back to the Top](#coffee-sales-analysis)
-
----
-
-## Project Outcome  
-
-- Identified top 5 selling products and categories contributing to over 60% of revenue
-- Highlighted sales peaks during weekends and seasonal spikes
-- Delivered a self-serve dashboard used by business owners for daily sales tracking
-- Enabled slice-and-dice filtering by date, product, and order type
-
-[Back to the Top](#coffee-sales-analysis)
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
 
 ---
 
@@ -113,14 +106,18 @@ The following are the files in this project.
 4. Refresh the visuals and interact with filters  
 5. Optional: View the published version [here](https://app.powerbi.com/view?r=eyJrIjoiN2QzNTc4ZmYtZTdlYy00NTcyLWJhYzUtNTRkNTg0OGJiYmMwIiwidCI6Ijk3ODIwYmJjLTE3ZjUtNGRmYy1iNjlkLTY5ZWJjOTRhYzZiZiJ9)
 
-[Back to the Top](#coffee-sales-analysis)
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
 
 ---
-## Conclusion  
+## Next Steps  
 
-The dashboard empowers coffee shop managers to make data-driven decisions about inventory, staffing, and promotions. It showcases the value of BI tools in small business operations. Future upgrades could include customer segmentation or cost analysis.
+With more time, I would:
+- Incorporate **profit margin and cost data** to optimise for profitability, not just revenue.
+- Add **customer segmentation** to understand repeat vs. new buyers.
+- Expand to **multi-store analysis** for benchmarking across locations.
+- Address data limitations (only ~1,000 transactions, no customer IDs) by collecting more granular data over a longer period.
 
-[Back to the Top](#coffee-sales-analysis)
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
 
 ---
 
@@ -148,7 +145,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[Back to the Top](#coffee-sales-analysis)
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
 
 ---
 
@@ -158,4 +155,4 @@ SOFTWARE.
 - LinkedIn - [Prasanna Sriram](https://www.linkedin.com/in/prasanna-sriram/)
 - Tableau - [Tableau Public Profile](https://public.tableau.com/app/profile/prasanna.sriram.ps)
 
-[Back to the Top](#coffee-sales-analysis)
+[Back to the Top](#coffee-sales-analysis-for-retail-performance-optimization)
